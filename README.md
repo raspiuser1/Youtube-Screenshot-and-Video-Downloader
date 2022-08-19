@@ -18,4 +18,5 @@ The results will be sent on telegram (if not to big) and stored in a local `vid`
 - Clone this repository `git clone https://github.com/raspiuser1/Youtube-Screenshot-and-Video-Downloader` 
 - Install the packages: `pip install -r requirements.txt`
 - Get a key from @thebotfather on telegram and store it in the key.txt file
+- Start the bot with `python3 snap.py`
 You can view the commands of this bot by typing `/help'
