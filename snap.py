@@ -66,7 +66,14 @@ def stop(update: Update, context: CallbackContext):
         p = subprocess.Popen("./stop.sh", stdout=subprocess.PIPE, shell=True)
     finally:
         sys.exit()
-            
+
+def makedir():
+        isExist = os.path.exists(os.getcwd() + "/vid/")
+        if not isExist:
+                os.makedirs(os.getcwd() + "/vid/")
+        isExist = os.path.exists(os.getcwd() + "/img/")
+        if not isExist:
+                os.makedirs(os.getcwd() + "/img/")           
             
 def remove_snap(update: Update, context: CallbackContext):
     global remove1
@@ -82,6 +89,7 @@ def unknown(update: Update, context: CallbackContext):
     print("Onbekend commando")    
     
 
+                
 def get_yt_vid(update: Update, context: CallbackContext):
     global videoid,filenu88     
     try:
@@ -100,6 +108,7 @@ def get_yt_vid(update: Update, context: CallbackContext):
                     videoid = ytlink.split("youtu.be/")[1]
                 
         utime = int(time.time())
+
         filenu88 = os.getcwd() + "/vid/" + videoid + "_" + str(date.today()) + "_" + str(utime) + ".mp4"        
 
         update.message.reply_text("Downloading video in High Quality....")
@@ -215,7 +224,8 @@ def screenshot(update: Update, context: CallbackContext):
         update.message.reply_text("Error: Fill in all the arguments")
   
 
-#telegram options=================================================================================================             
+#telegram options=================================================================================================
+makedir()
 updater = Updater(my_token,use_context=True)
 updater.dispatcher.add_handler(CommandHandler('help', help))
 updater.dispatcher.add_handler(CommandHandler('restart', restart))
