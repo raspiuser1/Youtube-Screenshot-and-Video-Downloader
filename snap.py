@@ -1,4 +1,4 @@
-#thetube.selfhost.co/snap?=1
+#https://github.com/raspiuser1/Youtube-Screenshot-and-Video-Downloader
 from telegram.ext.updater import Updater
 from telegram.update import Update
 from telegram.ext.callbackcontext import CallbackContext
