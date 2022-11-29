@@ -21,4 +21,5 @@ The results will be sent on telegram (if not to big) and stored in a local `vid`
 - Start the bot with `python3 snap.py`
 You can view the commands of this bot by typing `/help'
 
-## If you do not have the possibility you can use the webpage link in the video description. Its a web-based bot.
+## 
+If you do not have the possibility you can use the webpage link in the video description. Its a web-based bot.
